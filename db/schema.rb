@@ -14,10 +14,12 @@
 ActiveRecord::Schema.define(version: 20190322233239) do
 
   create_table "issues", force: :cascade do |t|
-    t.string  "title",          limit: 255
-    t.text    "description",    limit: 65535
-    t.integer "positive_point", limit: 4
-    t.integer "negative_point", limit: 4
+    t.string   "title",          limit: 255
+    t.text     "description",    limit: 65535
+    t.integer  "positive_point", limit: 4
+    t.integer  "negative_point", limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
