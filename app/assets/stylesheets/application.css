@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+.vote-button {
+  border: none;
+  color: white;
+  padding: 1px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.vote-button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.vote-button:active {
+  transition: all 0.8s;
+
+}
+
+.positive-button {
+  background-color: #51d656;
+}
+
+.negative-button {
+  background-color: #f44336;
+}
+
+.issue-title{
+  padding: 1px 24px;
+}
+
+.positive-count{
+  padding: 1px 10px;
+}
+
+.negative-count{
+  color: #f44336;
+  padding: 1px 10px;
+}
+
+.disable-button {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

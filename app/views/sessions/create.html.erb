@@ -1,0 +1,14 @@
+  <div class="container">
+    <h1><%= I18n.t("issues.index.title") %></h1>
+    <div ng-controller="IssuesCtrl as list">
+      <ul>
+        <li ng-repeat="issue in list.issues">
+          <spam class="issue-title" ><b>{{issue.title}}</b></spam>
+          <button class="vote-button positive-button" ng-click="list.PositiveVote(issue.id)">+</button> <b class="positive-count">{{issue.positive_point}}</b>
+          <button class="vote-button negative-button" ng-click="list.NegativeVote(issue.id)">-</button> <b class="negative-count">{{issue.negative_point}}</b>
+           <br>
+          {{issue.description}} <br>
+        </li>
+      </ul>
+    </div>
+  </div>
