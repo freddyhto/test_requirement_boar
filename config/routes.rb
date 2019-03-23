@@ -53,4 +53,11 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root 'issues#index'
+
+  resources :issues do
+    collection do
+      get 'score'
+    end
+  end
 end

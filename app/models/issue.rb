@@ -1,4 +1,4 @@
-class Issues < ActiveRecord::Base
+class Issue < ActiveRecord::Base
 
   validates :title, :description, :presence => true
 
