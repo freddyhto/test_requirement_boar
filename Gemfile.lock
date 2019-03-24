@@ -90,7 +90,6 @@ GEM
       mini_portile2 (~> 2.4.0)
     pg (0.21.0)
     popper_js (1.14.5)
-    puma (3.12.1)
     rack (1.6.11)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -178,7 +177,6 @@ DEPENDENCIES
   jquery-rails
   mysql2 (= 0.3.20)
   pg (~> 0.15)
-  puma
   rails (= 4.2.11)
   rails_12factor
   responders (~> 2.0)
