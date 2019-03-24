@@ -37,6 +37,9 @@ gem 'angular-rails-templates'
 
 gem 'bootstrap'
 
+#to google api calls
+gem 'httparty'
+
 #gems to deploy on heroku
 group :production do
   gem 'pg', '~> 0.15'

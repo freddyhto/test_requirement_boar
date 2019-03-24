@@ -1,10 +1,11 @@
 app = angular.module("requirements", ["ngResource"]);
 
-app.controller("IssuesCtrl", ['$scope', '$resource', '$http', function($scope, $resource, $http){
+app.controller("IssuesCtrl", ['$scope', '$resource', '$http', 'orderByFilter', function($scope, $resource, $http, orderBy){
   var list = this;
   var Issues = $resource("/issues/:id", {id: "@id"}, {score: {method: "POST"}});
   list.issues = Issues.query();
 
+  // add positive vote
   list.PositiveVote = function(id){
     list.issues.$promise.then(function(){
       var issue = list.issues.filter(function(item){ 
@@ -16,6 +17,7 @@ app.controller("IssuesCtrl", ['$scope', '$resource', '$http', function($scope, $
     });
   }
 
+  // add negative vote
   list.NegativeVote = function(id){
     list.issues.$promise.then(function(){
       var issue = list.issues.filter(function(item){ 
