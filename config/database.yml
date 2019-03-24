@@ -15,8 +15,8 @@ development:
   pool: 5
   host: localhost
   encoding: utf8
-  username: rails_apps
-  password: fre123
+  username: b944a0b756d964
+  password: 2fc82f40
   timeout: 5000
 
 
