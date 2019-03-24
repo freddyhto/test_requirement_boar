@@ -34,12 +34,13 @@ development:
 #  timeout: 5000
 
 production:
-  adapter: mysql
-  database: heroku_5dd240c539bc3c8
-  pool: 5
-  host: us-cdbr-iron-east-03.cleardb.net
+  adapter: postgresql
+  database: d28fnfh6op47p6
+  host: ec2-75-101-131-79.compute-1.amazonaws.com
+  port: 5432
+  username: juifhsvocgbyqp
+  password: ff498d8850ee70f99803ad43670b900981ebb86471f1df85ceee8b3fc21c19e0
   encoding: utf8
-  user: b944a0b756d964
-  password: 2fc82f40
+  pool: 5
   reconnect: true
   timeout: 5000
