@@ -1,8 +1,12 @@
   <div class="container">
     <h1><%= I18n.t("issues.index.title") %></h1>
     <div ng-controller="IssuesCtrl as list">
+      Order by: <select ng-model="list.sort">
+                  <option value="-positive_votes">Votes</option>
+                  <option value="title">Alphabetic</option>
+                </select>
       <ul>
-        <li ng-repeat="issue in list.issues">
+        <li ng-repeat="issue in list.issues | orderBy: list.sort">
           <spam class="issue-title" ><b>{{issue.title}}</b></spam>
           <button class="vote-button positive-button" ng-click="list.PositiveVote(issue.id)">+</button> <b class="positive-count">{{issue.positive_votes}}</b>
           <button class="vote-button negative-button" ng-click="list.NegativeVote(issue.id)">-</button> <b class="negative-count">{{issue.negative_votes}}</b>

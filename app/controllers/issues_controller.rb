@@ -1,6 +1,7 @@
 class IssuesController < ApplicationController
-  before_filter :set_issue, :except => [:index, :create]
+  before_filter :set_issue, :except => [:index, :create, :board]
   respond_to :json
+  before_filter :authenticate_user!
 
   def index
     render json: Issue.issues_and_votes
@@ -32,6 +33,9 @@ class IssuesController < ApplicationController
     if @issue.add_vote(params[:vote], current_user.id)
       render json: @issue
     end
+  end
+
+  def board
   end
 
   private

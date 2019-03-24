@@ -10,14 +10,18 @@ class ApplicationController < ActionController::Base
     cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
   end
 
-  protected
-  #dummy current user
-  def current_user
-    User.first
-  end
+  private
+    def current_user
+      return User.first if DUMMY_LOG_ON 
+      @user ||= session['session_id'] && User.find_by_session_token(session['session_id'])
+    end
 
-  #verified request with X-XSRF-TOKEN
-  def verified_request?
-    super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
-  end
+    def authenticate_user!
+      redirect_to session_new_path if current_user.blank? && !DUMMY_LOG_ON
+    end
+
+    #verified request with X-XSRF-TOKEN
+    def verified_request?
+      super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
+    end
 end
