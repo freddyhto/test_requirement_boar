@@ -39,7 +39,7 @@ gem 'bootstrap'
 
 #gems to deploy on heroku
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.15'
   gem 'rails_12factor'
 end
 
