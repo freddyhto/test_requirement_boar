@@ -4,8 +4,8 @@
       <ul>
         <li ng-repeat="issue in list.issues">
           <spam class="issue-title" ><b>{{issue.title}}</b></spam>
-          <button class="vote-button positive-button" ng-click="list.PositiveVote(issue.id)">+</button> <b class="positive-count">{{issue.positive_point}}</b>
-          <button class="vote-button negative-button" ng-click="list.NegativeVote(issue.id)">-</button> <b class="negative-count">{{issue.negative_point}}</b>
+          <button class="vote-button positive-button" ng-click="list.PositiveVote(issue.id)">+</button> <b class="positive-count">{{issue.positive_votes}}</b>
+          <button class="vote-button negative-button" ng-click="list.NegativeVote(issue.id)">-</button> <b class="negative-count">{{issue.negative_votes}}</b>
            <br>
           {{issue.description}} <br>
         </li>

@@ -3,7 +3,7 @@ class IssuesController < ApplicationController
   respond_to :json
 
   def index
-    render json: Issue.all
+    render json: Issue.issues_and_votes
   end
 
   def new
@@ -31,8 +31,6 @@ class IssuesController < ApplicationController
   def score
     if @issue.add_vote(params[:vote], current_user.id)
       render json: @issue
-    else
-      render json: @issue.errors, status: :unprocessable_entity
     end
   end
 
