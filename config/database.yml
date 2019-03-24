@@ -15,8 +15,8 @@ development:
   pool: 5
   host: localhost
   encoding: utf8
-  username: b944a0b756d964
-  password: 2fc82f40
+  username: rails_apps
+  password: fre123
   timeout: 5000
 
 
@@ -33,12 +33,12 @@ development:
 #  password: fre209t
 #  timeout: 5000
 
-#production:
-#  adapter: mysql
-#  database: requirement_board
-#  pool: 5
-#  host: localhost
-#  encoding: utf8
-#  user: root
-#  password: fre209t
-#  timeout: 5000
+production:
+  adapter: mysql
+  database: requirement_board
+  pool: 5
+  host: mysql://b944a0b756d964:2fc82f40@us-cdbr-iron-east-03.cleardb.net/heroku_5dd240c539bc3c8?reconnect=true
+  encoding: utf8
+  user: b944a0b756d964
+  password: 2fc82f40
+  timeout: 5000
