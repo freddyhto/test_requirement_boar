@@ -34,7 +34,14 @@ gem 'responders', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 gem 'angularjs-rails'
 
+gem 'angular-rails-templates'
+
 gem 'bootstrap'
+
+#gems to deploy on heroku
+gem 'pg'
+
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
