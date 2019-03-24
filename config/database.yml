@@ -35,10 +35,11 @@ development:
 
 production:
   adapter: mysql
-  database: requirement_board
+  database: heroku_5dd240c539bc3c8
   pool: 5
-  host: mysql://b944a0b756d964:2fc82f40@us-cdbr-iron-east-03.cleardb.net/heroku_5dd240c539bc3c8?reconnect=true
+  host: us-cdbr-iron-east-03.cleardb.net
   encoding: utf8
   user: b944a0b756d964
   password: 2fc82f40
+  reconnect: true
   timeout: 5000
